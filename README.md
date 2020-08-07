@@ -35,7 +35,7 @@ It's already aggregated enough for now, but we can still imporve these using arg
 
 # 1. Why are we interested in stock price prediction? <a class="anchor" id="abstract"></a>
 
-Stock return prediction is one of the most attractive issues in money related exploration. It is firmly identified with numerous significant budgetary issues, for example, portfolio the executives, capital expense and market efficiency.The monetary market colossally impacts our every day lives in numerous points of view. Our gathering needs to conjecture the stock through the consecutive information. Individuals put resources into trade exchanged assets against the swelling rate. Netflix produces TV arrangement to uncover Wall Street's life. Time arrangement guaging is one of the most testing missions by profound learning. In this exploration, we expect to locate a proper model for stock value forecast alongside a benefit expanding exchanging technique. Long momentary memory is the principle strategy utilized on the objectives of stock cost of two companies: The Procter and Gamble Company and Bank of America. As examination, a few information de-noising is done by one-dimentional residual convolutional network before going into the LSTM as input features
+Stock return prediction is one of the most attractive issues in money related exploration. It is firmly identified with numerous significant budgetary issues, for example, portfolio the executives, capital expense and market efficiency.The monetary market colossally impacts our every day lives in numerous points of view. Our gathering needs to conjecture the stock through the consecutive information. Individuals put resources into trade exchanged assets against the swelling rate. Netflix produces TV arrangement to uncover Wall Street's life. Time arrangement guaging is one of the most testing missions by profound learning. In this exploration, we expect to locate a proper model for stock value forecast alongside a benefit expanding exchanging technique. Long momentary memory is the principle strategy utilized on the objectives of stock cost of two companies: The Procter and Gamble Company and Bank of America. As examination, a few information de-noising is done by one-dimentional residual convolutional network.
 
 Honestly speaking, we would like to apply netural networks on stock data to make some prediction on stock price. Try to find some chances to earn some money in the market. This is our inital thoughts. 
 
@@ -45,7 +45,7 @@ Numerous parametric methodologies are grown however neglect to create exact outc
 
 ## 2.1. Idea of financial Market: 
 
-"Buy low, sell high" is the oldest and the most famous criterion in the market. However, the real world is more complicated. In order to mimic transactions as close as the reality, four trading strategies are developed. In other words, the ultimate objective of this experiment is to maximize profits based on the outputs and strategies.
+"Buy low, sell high" is the oldest and the most famous criterion in the market. However, the real world is more complicated than it. In order to mimic transactions in reality, four trading strategies are developed. The ultimate objective of this experiment is to maximize profits based on the outputs and strategies.
 
 # 3. Dataset <a class="anchor" id="thedata"></a>
 
@@ -85,7 +85,7 @@ _figure 2: close price for PG_
 _figure 3: close price for BAC_
 
 ## 3.1. Technical indicators <a class="anchor" id="technicalind"></a>
-5 days and 100 days moving averages are applied to smooth temporary and random price fluctuations over time. A buy signal happens when the short-duration MA crosses above the long-duration MA. In professional terms, this is called a "golden cross." On the contrary, the trend of price drops and generates a sell signal when two lines cross the other way. This is known as a "dead cross. " Some other technical indicators tracked are Average True Range, Bollinger Bands, Rate of Change, Force Index, Williams percentage Range and Moving Average Convergence Divergence. The third dataset is the S&P 500, as a benchmark to represent the overall economy.
+5 days and 100 days moving averages are firstly applied in order to smooth random price fluctuations over time. A buy signal happens when the short-duration MA crosses above the long-duration MA. In professional terms, this is called a "golden cross." On the contrary, the trend of price drops and generates a sell signal when two lines cross the other way. This is known as a "dead cross. " Some other technical indicators tracked are Average True Range, Bollinger Bands, Rate of Change, Force Index, Williams percentage Range and Moving Average Convergence Divergence. The third dataset is the S&P 500, as a benchmark to represent the overall economy.
 
 A lot of investors follow technical indicators. We included the most popular indicators as independent features.
 
@@ -104,7 +104,7 @@ _figure 4:  architecture of LSTM_
 
 ## 4.2 Model Explanation LSTM continued  <a class="anchor" id="Model.c"></a>
 
-As the new information flows through different gates (the input gate zi , the forget gate zf and the output gate zo) in memory blocks, it is read, forgotten and stored. Then, the cell state and the hidden state are updated and transferred to the next cell. For instance, previous cell state ct-1 is used to store the information kept from the last step: an increasing trend of the stock price in the past. Previous hidden state ht-1 is used to receive outputs from last cells: the closing price of the stock yesterday. Next, they are combined with the current input state at xt, which can fresh information: an unexpected major personnel change today. Finally, an accurate output is received.
+The new information is read, forgotten and stored when it flows through input gate, forget gate and output gate in memory blocks. Then, the cell state and the hidden state are updated,transferred and combined with new inputs. Let us take the stock in financial market as an example. For instance, previous cell state ct-1 is used to store the information kept from the last step: an increasing trend of the stock price in the past. Previous hidden state ht-1 is used to receive outputs from last cells: the closing price of the stock yesterday. Next, they are combined with the current input state at xt, which can fresh information: an unexpected major personnel change today. Finally, an accurate output is received.
 
 
 ## 4.3 1D-CNN  <a class="anchor" id="cnn"></a>
